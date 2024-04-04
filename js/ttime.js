@@ -21,6 +21,36 @@ function updateTimer() {
 setInterval(updateTimer, 1000);
 
 
+// 设置一个包含不同月份背景图像文件名的数组
+const backgroundImages = [
+    "january.jpg",
+    "february.jpg",
+    "c3.jpg",
+    "c4.jpg",
+    "02.gif",
+    "x6.jpg",
+    "7.jpg",
+    "8.jpg",
+    "q9.jpg",
+    "10.jpg",
+    "q11.jpg",
+    "12.jpg",
+];
+
+const headerElement = document.querySelector(".header");
+let currentImageIndex = new Date().getMonth();
+
+
+function changeBackgroundImage(direction) {
+    if (direction === "next") {
+        currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+    } else if (direction === "prev") {
+        currentImageIndex = (currentImageIndex - 1 + backgroundImages.length) % backgroundImages.length;
+    }
+    headerElement.style.backgroundImage = `url('${backgroundImages[currentImageIndex]}')`;
+    headerElement.style.backgroundPosition = 'center';  // 添加这行
+}
+
 const monthNames = ["一月", "二月", "三月", "四月", "五月", "六月",
     "七月", "八月", "九月", "十月", "十一月", "十二月"];
 let currentMonth = new Date().getMonth();
@@ -79,14 +109,21 @@ document.getElementById("prev").addEventListener("click", function () {
     currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
     currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
     createCalendar(currentMonth, currentYear);
+    changeBackgroundImage("prev");  // 修改这行
 });
 
 document.getElementById("next").addEventListener("click", function () {
     currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
     currentMonth = (currentMonth === 11) ? 0 : currentMonth + 1;
     createCalendar(currentMonth, currentYear);
+    changeBackgroundImage("next");  // 修改这行
 });
 
+// 在页面加载时设置初始背景图像和日历
 window.onload = function () {
     createCalendar(currentMonth, currentYear);
+    changeBackgroundImage();
 };
+
+
+

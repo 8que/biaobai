@@ -1,0 +1,73 @@
+#calendar {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    /* 添加字体样式 */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 垂直居中标题 */
+    padding: 10px;
+    background-color: #f3f3f3;
+    height: 150px;
+    /* 高度 */
+}
+
+.day {
+    display: inline-block;
+    width: calc(100% / 7);
+    /* 使用百分比宽度，确保每个网格平均分配 */
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-sizing: border-box;
+    /* 防止边框影响盒模型 */
+}
+
+/* 日期悬停效果 */
+.day:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 月份导航按钮效果 */
+#prev,
+#next {
+    transition: background-color 0.3s ease;
+}
+
+#prev:hover,
+#next:hover {
+    background-color: #ddd;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f7cccc;
+    /* 这里设置你想要的背景颜色 */
+}
+
+/* 上个月和下个月按钮的样式 */
+#prev,
+#next {
+    background-color: #b1c6d8;/* 背景颜色 */
+    color: white;/* 文字颜色 */
+    border: none;/* 去除边框 */
+    padding: 10px 20px;/* 内边距 */
+    font-size: 14px; /* 字体大小 */
+    cursor: pointer;/* 鼠标指针样式 */
+    border-radius: 8px;/* 添加圆角 */
+}
+
+/* 悬停效果 */
+#prev:hover,
+#next:hover {
+    background-color: #0056A0;/* 鼠标悬停时的背景颜色 */
+    transition: background-color 0.3s ease;/* 平滑过渡效果 */
+}

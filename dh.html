@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喵喵的导航</title>
+    <!-- 导入字体图标 -->
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/cbl.css">
+    <link rel="stylesheet" href="css/ss.css">
+    <link rel="stylesheet" href="css/xldh.css">
+</head>
+
+<body>
+    <nav>
+        <div class="shell">
+            <input type="text" id="search-box" placeholder="今天想要找点什么东西吗₍˄·͈༝·͈˄*₎◞ ̑̑">
+            <a href="#" id="search-icon">
+                <i class="fa fa-hand-o-right"></i>
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+        <!-- 导航链接 -->
+        <nav class="navigation">
+            <ul>
+                <li><a href="http://i.chaoxing.com/"><i class="fas fa-book"></i>学习通</a></li>
+                <li><a href="http://8que.xyz/">白雀的小屋</a></li>
+                <li><a href="http://bilibili">bilibili</a></li>
+                <li><a href="https://www.bing.com/chat?q=Bing+AI&FORM=hpcodx">bing&ai</a></li>
+                <li><a href="#">github</a></li>
+                <li><a href="#">图片清晰术</a></li>
+                <li><a href="#">小游戏</a></li>
+                <li><a href="#">音频转换</a></li>
+                <!-- 添加更多导航链接 -->
+            </ul>
+        </nav>
+        <div class="accordion">点击展开内容</div>
+        <div class="content">
+            <a href="#">学习</a>
+            <a href="#">娱乐</a>
+            <a href="#">工具</a>
+        </div>
+    </nav>
+
+
+    <nav class="menu">
+        <div class="actionsBar">
+            <div>
+                <button id="menuBtn" type="button">
+                    <i class="iconfont icon-hanbaocaidan"></i>
+                </button>
+                <h3 class="menuText">小白雀</h3>
+            </div>
+        </div>
+        <ul class="optionsBar">
+            <li class="menuItem">
+                <a href="#" class="menuOption">
+                    <i class="iconfont icon-shouye"></i>
+                    <h5 class="menuText">主页</h5>
+                </a>
+            </li>
+            <li class="menuBreak">
+                <hr>
+            </li>
+            <li class="menuItem">
+                <button class="menuOption" type="button">
+                    <i class="iconfont icon-tupian"></i>
+                    <h5 class="menuText">Photo album</h5>
+                </button>
+            </li>
+
+            <li class="menuItem">
+                <button class="menuOption" type="button">
+                    <i class="iconfont icon-tupian"></i>
+                    <h5 class="menuText">Photo album</h5>
+                </button>
+            </li>
+        </ul>
+        <div class="about" id="about"></div>
+        <div class="menuUser">
+            <a href="#">
+                <div>
+                    <img src="./goat.jpg" alt="">
+                </div>
+                <h5 class="Username menuText">小白雀</h5>
+                <p class="menuText">
+                    <i class="iconfont icon-youjiantou"></i>
+                </p>
+            </a>
+        </div>
+        <div class="themeBar">
+            <div>
+                <button type="button">
+                    <i class="iconfont icon-tuichu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <script src="js/cbl.js"></script>
+    <script src="js/ss.js"></script>
+    <!-- 初始化 Foundation JS -->
+<script>
+    $(document).ready(function () {
+        $(document).foundation();
+    });
+</script>
+
+
+</body>
+
+</html>

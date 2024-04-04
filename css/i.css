@@ -1,0 +1,234 @@
+/* 全局样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* 头部样式 */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+
+/* 段落和标题样式 */
+h1, h2, p {
+    margin: 0.5em 0;
+}
+
+/* 主要内容区域 */
+section {
+    text-align: center;/* 内容居中 */
+    background-color: #fff;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 图片样式 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 我们在一起的时间部分的样式 */
+#timer-section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 计时器样式 */
+#timer {
+    font-size: 2em;
+    color: #e53e3e;
+    font-weight: bold;
+    margin-top: 10px;
+    animation: pulse 2s infinite;
+}
+
+/* 动画效果 */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* 导航栏样式 */
+header {
+    background-color: #333; /* 背景颜色 */
+    color: white; /* 文字颜色 */
+    padding: 10px 0; /* 填充 */
+}
+
+nav ul#navbar {
+    list-style-type: none; /* 移除列表样式 */
+    margin: 0; /* 外边距 */
+    padding: 0; /* 内边距 */
+    overflow: hidden; /* 防止内容溢出 */
+    display: flex; /* 使用Flex布局 */
+    justify-content: center; /* 水平居中 */
+}
+
+nav ul#navbar li {
+    float: left; /* 列表项浮动 */
+}
+
+nav ul#navbar li a {
+    display: block; /* 块级元素 */
+    color: white; /* 链接文字颜色 */
+    text-align: center; /* 文字居中 */
+    padding: 14px 16px; /* 链接填充 */
+    text-decoration: none; /* 移除下划线 */
+}
+
+nav ul#navbar li a:hover {
+    background-color: #ddd; /* 鼠标悬停背景颜色 */
+    color: black; /* 鼠标悬停文字颜色 */
+}
+
+/* 标题样式 */
+header h1 {
+    text-align: center; /* 居中对齐 */
+    margin: 0; /* 外边距 */
+}
+
+/* 留言板样式 */
+#message-board {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#message-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.message {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative; /* 或者 'fixed' 如果你想要页脚始终显示在底部 */
+    bottom: 0;
+    width: 100%;
+}
+
+/* 小卡片的CSS样式 */
+.card-horizontal {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: auto;
+    height: 100px; /* 可以根据需要调整图片高度 */
+    margin-right: 10px;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .card-horizontal {
+        flex-direction: column;
+    }
+}
+
+/* 头像·*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row {
+    width: 100%;
+}
+.sidebar-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pic, .couple-love {
+    width: auto;
+    height: 100px; /* 可以根据需要调整高度 */
+}
+
+.pic {
+    border-radius: 50%; /* 创建圆形图片 */
+    position: relative;
+    z-index: 1; /* 确保图片在爱心之上 */
+}
+
+.couple-love {
+    position: relative;
+    z-index: 0; /* 确保爱心在图片之下 */
+}
+
+/* 调整图片与爱心的相对位置 */
+.pic, .couple-love {
+    width: auto;
+    height: 100px; /* 可以根据需要调整高度 */
+    margin: 0 10px; /* 为图片添加左右外边距 */
+}
+
+/* CSS实现字体颜色渐变动画 */
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: yellow; }
+    50% { color: green; }
+    75% { color: blue; }
+    100% { color: red; }
+}
+
+.text {
+    animation: colorChange 5s infinite;
+}
+

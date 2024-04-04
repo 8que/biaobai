@@ -1,0 +1,142 @@
+.navigation {
+    display: block;
+    /* 设置为块级元素，使其占据整行 */
+    margin-top: 20px;
+    /* 设置与搜索框的距离 */
+    text-align: center;
+    /* 如果需要，可以使链接在页面中居中显示 */
+}
+
+.navigation ul {
+    padding: 0;
+    /* 移除默认的内边距 */
+}
+
+.navigation li {
+    display: inline-block;
+    /* 设置列表项为内联块级元素，使其水平排列 */
+    margin-right: 15px;
+    /* 设置列表项之间的距离 */
+}
+
+/* 添加你的 CSS 样式 */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffdcdc;
+    padding: 20px 0;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    /* 设置导航项之间的间距 */
+}
+
+.navigation li {
+    /* 可以添加其他样式，如字体大小、颜色等 */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* 导航链接的样式 */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffdcdc;
+    padding: 100px 0;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    /* 设置导航项之间的间距 */
+}
+
+.navigation li {
+    /* 可以添加其他样式，如字体大小、颜色等 */
+    font-size: 18px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+    /* 添加过渡效果 */
+}
+
+.navigation a:hover {
+    color: #ff7575;
+    /* 鼠标悬停时改变颜色 */
+}
+
+/* 添加图标样式 */
+.navigation a::before {
+    content: "";
+    /* 使用伪元素添加图标 */
+    position: absolute;
+    top: -5px;
+    /* 调整图标位置 */
+    left: -20px;
+    /* 调整图标位置 */
+    font-family: "Font Awesome";
+    /* 使用 Font Awesome 图标字体 */
+    font-size: 20px;
+    color: #ff7575;
+    /* 图标颜色 */
+}
+
+/* 不同图标对应不同类名 */
+.navigation li:nth-child(1) a::before {
+    content: "\f19d";
+    /* 学习通图标 */
+}
+
+.navigation li:nth-child(2) a::before {
+    content: "\f015";
+    /* 白雀的小屋图标 */
+}
+
+/* 添加你的 CSS 样式 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.accordion {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.content {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
